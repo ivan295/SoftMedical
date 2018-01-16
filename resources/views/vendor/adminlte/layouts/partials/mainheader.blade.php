@@ -8,6 +8,10 @@
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>DIRECCION</b></span>
     </a>
+    <?php
+date_default_timezone_set('America/Guayaquil');
+
+?>
 <!-- Navbar Right Menu -->
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -89,6 +93,7 @@
                                 </li><!-- end task item -->
                             </ul>
                         </li>
+
                         <li class="footer">
                             <a href="#">{{ trans('adminlte_lang::message.alltasks') }}</a>
                         </li>
@@ -98,6 +103,7 @@
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
                     <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
                 @else
+
                     <!-- User Account Menu -->
                     <li class="dropdown user user-menu" id="user_menu">
                         <!-- Menu Toggle Button -->
@@ -113,7 +119,9 @@
                                 <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
                                 <p>
                                     {{ Auth::user()->name }}
-                                    <small><?=date('d/m/Y')?> </small>
+
+                                    <small><?=date('d/m/Y  g:ia ')?> </small>
+
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -155,9 +163,7 @@
                 @endif
 
                 <!-- Control Sidebar Toggle Button -->
-                <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+                
             </ul>
         </div>
     </nav>
