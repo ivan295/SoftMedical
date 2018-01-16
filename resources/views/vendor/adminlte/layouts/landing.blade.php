@@ -145,7 +145,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                                 </div><!-- /accordion-heading -->
                                 <div id="collapseOne" class="accordion-body collapse in">
                                     <div class="accordion-inner">
-                                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    THOMAS
                                     </div><!-- /accordion-inner -->
                                 </div><!-- /collapse -->
                             </div><!-- /accordion-group -->
