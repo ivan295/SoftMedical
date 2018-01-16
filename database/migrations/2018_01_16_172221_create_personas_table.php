@@ -24,7 +24,6 @@ class CreatePersonasTable extends Migration
             $table->string('especialidad',50);
             $table->boolean('estado'); 
             $table->integer('idtipoPersona')->unsigned()->index();
-            //$table->index('idtipoPersona');
             $table->foreign('idtipoPersona')->references('id')->on('tipo_personas'); 
         });
     }

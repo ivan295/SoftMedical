@@ -22,8 +22,7 @@ class CreateMedicamentosTable extends Migration
             $table->datetime('fecha_ingreso');
             $table->datetime('fecha_vencimiento');
             $table->integer('idtipoMedicina')->unsigned()->index();
-            $table->foreign('idtipoMedicina')->references('id')->on('tipo_medicinas'); 
-           
+            $table->foreign('idtipoMedicina')->references('id')->on('tipo_medicinas');  
         });
     }
 
