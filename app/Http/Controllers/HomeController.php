@@ -26,12 +26,11 @@ class HomeController extends Controller
     {
         return view('adminlte::home');
     }
-    public function login()
-    {
-        return view('adminlte::auth.login');
-    }
+    
     public function register()
     {
         return view('adminlte::auth.register');
     }
+
+    
 }
