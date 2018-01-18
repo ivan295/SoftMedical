@@ -18,5 +18,7 @@ Route::get('/register', 'HomeController@register');
 
 
 Route::group(['prefix' => 'admin'], function () {
-      Route::resource('/personas', 'TipoPersonaController');
+      Route::resource('/tipoPersona', 'TipoPersonaController');
+      Route::resource('/Persona','PersonaController');
+
 });

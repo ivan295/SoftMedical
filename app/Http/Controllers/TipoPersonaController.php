@@ -36,7 +36,7 @@ class TipoPersonaController extends Controller
         return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
 
 
-       
+
     }
 
     public function store(Request $request)
@@ -45,13 +45,13 @@ class TipoPersonaController extends Controller
         $TipoPersona = new TipoPersonas;
         $TipoPersona->tipo = $request->tipoPersona;
         $TipoPersona->save();
-        return redirect('admin/personas/create');
+        return redirect('admin/tipoPersona/create');
     }
 
     public function search(Request $request){
          $tipoPersona = TipoPersonas::where('tipo','like','%'.$request->tipo.'%')->get();
           return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
-        
+
     }
 
 }

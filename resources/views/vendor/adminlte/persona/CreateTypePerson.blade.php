@@ -10,7 +10,7 @@ Tipo de Persona
 			<div class="col-md-10">
              @include('adminlte::mensaje.error')
 
-				<form  action="{{ route('personas.store') }}" method="post">
+				<form  action="{{ route('tipoPersona.store') }}" method="post">
 				  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 				  <div class="form-group">
 				    <label for="tipo">Tipo de persona</label>
@@ -32,7 +32,7 @@ Tipo de Persona
 					        <td>{{$tipoPersonas->id}}</td>
 					        <td>{{$tipoPersonas->tipo}}</td>
 							<td class="text-center">
-								<a href="#" class="btn btn-warning btn-xs">Modificar</a> 
+								<a href="#" class="btn btn-warning btn-xs">Modificar</a>
 								<a href="#" class="btn btn-danger btn-xs">Eliminar</a>
 							</td>
 						</tr>
@@ -41,7 +41,7 @@ Tipo de Persona
 				  </table>
 
 				{!! $tipoPersona->render() !!}
-				
+
 
 			</div>
 		</div>
