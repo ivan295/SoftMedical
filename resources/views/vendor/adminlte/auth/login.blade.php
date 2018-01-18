@@ -9,7 +9,7 @@
     <div id="app" v-cloak>
         <div class="login-box">
             <div class="login-logo">
-                <a href="{{ url('/home') }}"><b>Admin</b>LTE</a>
+                <a href="{{ url('/home') }}">DIRECCIÓN DE DESARROLLO</a>
             </div><!-- /.login-logo -->
 
         @if (count($errors) > 0)
@@ -28,13 +28,13 @@
 
         <login-form name="{{ config('auth.providers.users.field','email') }}"
                     domain="{{ config('auth.defaults.domain','') }}"></login-form>
-    </div>
+</div>
 
     </div>
     </div>
     @include('adminlte::layouts.partials.scripts_auth')
 
-    
+
 </body>
 
 @endsection

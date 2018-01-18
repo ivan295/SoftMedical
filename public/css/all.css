@@ -16083,7 +16083,7 @@ button.close {
  * ----------
  */
 .skin-blue .main-header .navbar {
-  background-color: #3c8dbc;
+  background-color: #87DF58;
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -16109,7 +16109,7 @@ button.close {
   color: #fff;
 }
 .skin-blue .main-header .navbar .sidebar-toggle:hover {
-  background-color: #367fa9;
+  background-color: #DFF7D2;
 }
 @media (max-width: 767px) {
   .skin-blue .main-header .navbar .dropdown-menu li.divider {
@@ -16119,19 +16119,19 @@ button.close {
     color: #fff;
   }
   .skin-blue .main-header .navbar .dropdown-menu li a:hover {
-    background: #367fa9;
+    background: #DFF7D2;
   }
 }
 .skin-blue .main-header .logo {
-  background-color: #367fa9;
+  background-color: #87DF58;
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
 .skin-blue .main-header .logo:hover {
-  background-color: #357ca5;
+  background-color: #DFF7D2;
 }
 .skin-blue .main-header li.user-header {
-  background-color: #3c8dbc;
+  background-color: #87DF58;
 }
 .skin-blue .content-header {
   background: transparent;
@@ -16139,7 +16139,7 @@ button.close {
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-  background-color: #222d32;
+  background-color: #222d32;  /* cambiar de color a menu izquierdo   */
 }
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
@@ -17949,7 +17949,7 @@ body {
   z-index: 800;
 }
 .main-footer {
-  background: #fff;
+  background: #87DF58;
   padding: 15px;
   color: #444;
   border-top: 1px solid #d2d6de;
@@ -21050,7 +21050,8 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
+  background: #87DF58;
+
 }
 .login-box,
 .register-box {
@@ -21060,13 +21061,21 @@ table.text-center th {
 @media (max-width: 768px) {
   .login-box,
   .register-box {
+    /*
+     * Page: Login & Register
+     * ----------------------
+     */
     width: 90%;
     margin-top: 20px;
   }
 }
+/*
+ * cambiar de color a la caja de login
+ */
+
 .login-box-body,
 .register-box-body {
-  background: #fff;
+  background: #DFF7D2;
   padding: 20px;
   border-top: 0;
   color: #666;

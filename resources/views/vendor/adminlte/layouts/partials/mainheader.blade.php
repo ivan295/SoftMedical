@@ -6,7 +6,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b></b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>DIRECCION</b></span>
+        <span class="logo-lg"><b>DIRECCIÓN</b></span>
     </a>
     <?php
 date_default_timezone_set('America/Guayaquil');
@@ -37,7 +37,7 @@ date_default_timezone_set('America/Guayaquil');
                                             <!-- User Image -->
                                             <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image"/>
                                         </div>
-                                        <!-- Message title and timestamp -->
+
 
                                         <!-- The message -->
                                         <p>{{ trans('adminlte_lang::message.awesometheme') }}</p>
@@ -163,7 +163,7 @@ date_default_timezone_set('America/Guayaquil');
                 @endif
 
                 <!-- Control Sidebar Toggle Button -->
-                
+
             </ul>
         </div>
     </nav>
