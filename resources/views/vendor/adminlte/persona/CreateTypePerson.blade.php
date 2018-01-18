@@ -1,7 +1,7 @@
 @extends('adminlte::layouts.app')
 
-@section('htmlheader_title')
-	{{ trans('adminlte_lang::message.home') }}
+@section('contentheader_title')
+Tipo de Persona
 @endsection
 
 @section('main-content')

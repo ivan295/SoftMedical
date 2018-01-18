@@ -124,20 +124,7 @@ date_default_timezone_set('America/Guayaquil');
 
                                 </p>
                             </li>
-                            <!-- Menu Body -->
-                            <!-- Menu Footer
-                            <li class="user-body">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.followers') }}</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.sales') }}</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">{{ trans('adminlte_lang::message.friends') }}</a>
-                                </div>
-                            </li>
-                            <!-- Menu Footer-->
+                          
                             <li class="user-footer">
                                 <!-- Menu Footer
                                 <div class="pull-left">
@@ -148,7 +135,7 @@ date_default_timezone_set('America/Guayaquil');
                                     <a href="{{ url('/logout') }}" class="btn btn-default btn-flat" id="logout"
                                        onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                        {{ trans('adminlte_lang::message.signout') }}
+                                        Cerrar Sesión
                                     </a>
 
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

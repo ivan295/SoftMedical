@@ -25,7 +25,7 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
+            <li class="header">OPCIONES</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="treeview"><a href="#"><i class='fa fa-user'></i> <span>Persona</span></a>
                 <ul class="treeview-menu">
