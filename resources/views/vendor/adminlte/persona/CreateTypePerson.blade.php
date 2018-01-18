@@ -7,7 +7,7 @@
 @section('main-content')
 	<div class="container-fluid spark-screen">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-10">
              @include('adminlte::mensaje.error')
 
 				<form  action="{{ route('personas.store') }}" method="post">
@@ -23,23 +23,25 @@
 				      <tr>
 				        <th>#Registros</th>
 				        <th>Tipo de personas</th>
-				        <th>Acciones</th>
+				        <th class="text-center">Acciones</th>
 				      </tr>
 				    </thead>
 				    <tbody>
 				   	@foreach($tipoPersona as $tipoPersonas)
-				      <tr>
-				        <td>{{$tipoPersonas->id}}</td>
-				        <td>{{$tipoPersonas->tipo}}</td>
-								<td><a href="#" class="btn btn-warning">Modificar</a></td>
-								<td><a href="#" class="btn btn-danger">Eliminar</a></td>
-								</tr>
+				        <tr>
+					        <td>{{$tipoPersonas->id}}</td>
+					        <td>{{$tipoPersonas->tipo}}</td>
+							<td class="text-center">
+								<a href="#" class="btn btn-warning btn-xs">Modificar</a> 
+								<a href="#" class="btn btn-danger btn-xs">Eliminar</a>
+							</td>
+						</tr>
 				      @endforeach
 				    </tbody>
 				  </table>
 
 				{!! $tipoPersona->render() !!}
-				{!! $tipoPersona->currentPage() !!}
+				
 
 			</div>
 		</div>
