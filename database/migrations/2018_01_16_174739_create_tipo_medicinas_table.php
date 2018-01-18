@@ -13,9 +13,10 @@ class CreateTipoMedicinasTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_medicinas', function (Blueprint $table) {
+        Schema::create('tipomedicinas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tipo',80);
+            $table->boolean('estado');
         });
     }
 
