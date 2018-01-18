@@ -10,9 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@index');
-Route::get('/register', 'HomeController@register');
+Route::get('/', function () {
+    return redirect('/login');
+});
 
+Route::get('/home', function () {
+    return redirect('/index');
+});
+Route::get('/index', 'HomeController@index');
+
+
+Route::get('/register', 'HomeController@register');
 Route::resource('/persona', 'TipoPersonaController');
 
 

@@ -44142,13 +44142,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" " + _vm._s(_vm.trans('adminlte_lang_message.remember')) + "\n    ")])])]), _vm._v(" "), _c('div', {
     staticClass: "col-xs-4"
   }, [_c('button', {
-    staticClass: "btn btn-primary btn-block btn-flat",
+    staticClass: "btn btn-success btn-block btn-flat",
     attrs: {
       "type": "submit",
       "disabled": _vm.form.errors.any()
     },
     domProps: {
-      "textContent": _vm._s(_vm.trans('adminlte_lang_message.buttonsign'))
+      "textContent":"Iniciar"
     }
   }, [(_vm.form.submitting) ? _c('i', {
     staticClass: "fa fa-refresh fa-spin"
