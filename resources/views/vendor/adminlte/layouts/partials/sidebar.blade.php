@@ -33,10 +33,12 @@
                     <li><a href="{{ url('admin/Persona/create') }}"><i class='fa fa-new'></i>Nueva</a></li>
                 </ul>
             </li>
-
-
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>
-
+            <li><a href="treeview"><i class='fa fa-link'></i> <span>Medicina</span></a>
+            <ul class="treeview-menu">
+                <li><a href="{{ url('admin/tipoMedicamento/create') }}"><i class='fa fa-add'></i>Tipo Medicina</a></li>
+                <li><a href="#"><i class='fa fa-new'></i>Nueva Medicina</a></li>
+            </ul>
+          </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
