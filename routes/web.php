@@ -19,5 +19,7 @@ Route::get('/personas/search', 'TipoPersonaController@search');
 
 
 Route::group(['prefix' => 'admin'], function () {
-      Route::resource('/personas', 'TipoPersonaController');
+      Route::resource('/tipoPersona', 'TipoPersonaController');
+      Route::resource('/Persona','PersonaController');
+
 });
