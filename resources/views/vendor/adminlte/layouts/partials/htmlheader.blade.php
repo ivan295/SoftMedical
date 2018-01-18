@@ -15,6 +15,7 @@
     <![endif]-->
 
     <script>
+        
         //See https://laracasts.com/discuss/channels/vue/use-trans-in-vuejs
         window.trans = @php
             // copy all translations from /resources/lang/CURRENT_LOCALE/* to global JS variable

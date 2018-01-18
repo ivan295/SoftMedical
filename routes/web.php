@@ -14,6 +14,7 @@ Route::get('/', function () {return redirect('/login');});
 Route::get('/home', function () {return redirect('/admin/index');});
 Route::get('/admin/index', 'HomeController@index');
 Route::get('/register', 'HomeController@register');
+Route::get('/personas/search', 'TipoPersonaController@search');
 
 
 

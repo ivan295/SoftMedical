@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\TipoPersonas;
-
+use Response;
 
 
 
@@ -48,10 +48,13 @@ class TipoPersonaController extends Controller
         return redirect('admin/personas/create');
     }
 
-    public function search(Request $request){
-         $tipoPersona = TipoPersonas::where('tipo','like','%'.$request->tipo.'%')->get();
-          return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
-        
+    public function destroy(Request $request, $id) 
+    {
+        $tipoPersona = DB::table('TipoPersonas')
+                     ->where('id', $id)
+                     ->update(['estado' => 0]);
+        }
+        return redirect('admin/personas/create');
     }
-
+           
 }

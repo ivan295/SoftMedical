@@ -8,5 +8,5 @@ class TipoPersonas extends Model
 {
   public $timestamps = false;
   protected $table = 'tipopersonas';
-  protected $fillable = ['tipo'];
+  protected $fillable = ['tipo', 'estado'];
 }
