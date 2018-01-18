@@ -32,7 +32,7 @@ class TipoPersonaController extends Controller
     {
        $tipoPersona = DB::table('tipopersonas')
                      ->orderBy('id','desc')
-                     ->paginate(5);
+                     ->paginate(10);
         return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
 
 
@@ -46,6 +46,12 @@ class TipoPersonaController extends Controller
         $TipoPersona->tipo = $request->tipoPersona;
         $TipoPersona->save();
         return redirect('admin/personas/create');
+    }
+
+    public function search(Request $request){
+         $tipoPersona = TipoPersonas::where('tipo','like','%'.$request->tipo.'%')->get();
+          return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
+        
     }
 
 }
