@@ -11,7 +11,7 @@
 			<div class="col-md-8 col-md-offset-2">
              @include('adminlte::mensaje.error') 
 
-				<form  action="{{ route('persona.store') }}" method="post">
+				<form  action="{{ route('personas.store') }}" method="post">
 				  <input type="hidden" name="_token" value="{{ csrf_token() }}">
 				  <div class="form-group">
 				    <label for="tipo">Tipo de persona</label>
@@ -19,11 +19,6 @@
 				  </div>
 				  <button type="submit" class="btn btn-default">Registar</button>
 				</form>
-
-
-
-
-
 				<table class="table table-striped">
 				    <thead>
 				      <tr>
@@ -42,7 +37,8 @@
 				    </tbody>
 				  </table>
 				
-
+				{!! $tipoPersona->render() !!}
+				{!! $tipoPersona->currentPage() !!}
 			</div>
 		</div>
 	</div>

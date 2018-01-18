@@ -35,7 +35,7 @@
             <!-- Optionally, you can add icons to the links -->
             <li class="treeview"><a href="#"><i class='fa fa-user'></i> <span>Persona</span></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url('/persona') }}"><i class='fa fa-add'></i>Tipo</a></li>
+                    <li><a href="{{ url('admin/personas/create') }}"><i class='fa fa-add'></i>Tipo</a></li>
                     <li><a href="#"><i class='fa fa-new'></i>Nueva</a></li>
                 </ul>
             </li>

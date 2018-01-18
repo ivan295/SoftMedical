@@ -28,12 +28,15 @@ class TipoPersonaController extends Controller
      * @return Response
     */
 
-    public function index()
+    public function create()
     {
-        $tipoPersona = DB::table('tipopersonas')
+       $tipoPersona = DB::table('tipopersonas')
                      ->orderBy('id','desc')
-                     ->get();
+                     ->paginate(5);
         return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
+
+
+       
     }
 
     public function store(Request $request)
@@ -42,11 +45,7 @@ class TipoPersonaController extends Controller
         $TipoPersona = new TipoPersonas;
         $TipoPersona->tipo = $request->tipoPersona;
         $TipoPersona->save();
-        return redirect('persona');
-
-        
+        return redirect('admin/personas/create');
     }
-
-    
 
 }

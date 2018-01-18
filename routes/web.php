@@ -10,25 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return redirect('/login');
-});
-
-Route::get('/home', function () {
-    return redirect('/index');
-});
-Route::get('/index', 'HomeController@index');
-
-
+Route::get('/', function () {return redirect('/login');});
+Route::get('/home', function () {return redirect('/admin/index');});
+Route::get('/admin/index', 'HomeController@index');
 Route::get('/register', 'HomeController@register');
-Route::resource('/persona', 'TipoPersonaController');
 
 
-Route::group(['middleware' => 'auth'], function () {
-    //    Route::get('/link1', function ()    {
-//        // Uses Auth Middleware
-//    });
 
-    //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.
-    #adminlte_routes
+Route::group(['prefix' => 'admin'], function () {
+      Route::resource('/personas', 'TipoPersonaController');
 });
