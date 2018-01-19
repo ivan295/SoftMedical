@@ -28,14 +28,20 @@ class TipoPersonaController extends Controller
      * @return Response
     */
 
-    public function create()
+    public function create(Request $request)
     {
-       $tipoPersona = DB::table('tipopersonas')
-                     ->where('estado', 1)
-                     ->orderBy('id','desc')
-                     ->paginate(10);           
-        return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
+       
+        $tipoPersona = DB::table('tipopersonas')
+                         ->where('estado', 1)
+                         ->orderBy('id','desc')
+                         ->paginate(10);           
+            
+        if ($request->ajax()){
+           return response()->json($tipoPersona);
+        }else{
 
+            return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
+        }
     }
 
     public function store(Request $request)
@@ -56,16 +62,18 @@ class TipoPersonaController extends Controller
         return redirect('admin/tipoPersona/create');
     }
     
-    public function search(Request $request){
-         $tipoPersona = TipoPersonas::where('tipo','like','%'.$request->tipo.'%')->get();
-          return view('adminlte::persona.CreateTypePerson', compact('tipoPersona'));
+    public function search(Request $request,$tipo){
+        if ($request->ajax()){
+            $tipoPersona = TipoPersonas::where('tipo','like','%'.$request->tipo.'%')->get();
+            return response()->json($tipoPersona);
+        }
     }
 
     public function show($id){
         $tipoPersona=DB::table('tipopersonas')
                      ->where('id',$id)
                      ->get();   
-         return view('adminlte::persona.edittype', compact('tipoPersona'));      
+        return view('adminlte::persona.edittype', compact('tipoPersona'));      
     }
 
     public function update(Request $request, $id) 

@@ -24,7 +24,7 @@ Tipo de Persona
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
                             <label>Tipo de persona</label>
-                            <input type="text" class="form-control" id="tipoPersona" name="tipoPersona">
+                            <input type="text" placeholder="Ingrese el tipo de persona" class="form-control" id="tipoPersona" name="tipoPersona">
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-warning btn-md">Registrar</button>
@@ -32,26 +32,23 @@ Tipo de Persona
                     </form>
                 </div>
             </div>
-            <div class="col-lg-2">
-            	<label class="box-title">Buscar por tipo</label>
+            <div class="input-group">
+              <span class="input-group-addon" id="sizing-addon2">Filtrar</span>
+              <input type="text" class="form-control" data-url="/personas/search" name="tipo" id="tipo" placeholder="BUSCAR POR TIPO" aria-describedby="sizing-addon2">
             </div>
-            <div class="col-lg-10">
-			    <div class="input-group">
-			      <input type="text" class="form-control" data-url="/personas/search'" name="tipo" id="tipo"> 
-			    </div>
-			 </div>
 			 <div id="eliminado"></div>
-            <table class="table table-striped">
+            <table class="table table-striped" id="tablaTipo">
                 <thead>
-                    <tr>
-                        <th>#Registros</th>
-                        <th>Tipo de personas</th>
+                    <tr >
+                        <th class='text-center'>#Registros</th>
+                        <th class='text-center'>Tipo de personas</th>
                         <th class="text-center">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr></tr>
                     @foreach($tipoPersona as $tipoPersonas)
-                    <tr>
+                    <tr class='text-center'>
                         <td>{{$tipoPersonas->id}}</td>
                         <td>{{$tipoPersonas->tipo}}</td>
                         <td class="text-center">
@@ -67,7 +64,6 @@ Tipo de Persona
 		                           </form>
 		                        </div>
 	                        </div>
-                         
                         </td>
                     </tr>
                     @endforeach
