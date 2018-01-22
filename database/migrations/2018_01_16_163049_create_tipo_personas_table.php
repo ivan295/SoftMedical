@@ -15,9 +15,9 @@ class CreateTipoPersonasTable extends Migration
         Schema::create('tipopersonas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('tipo',80);
+            $table->boolean('estado');
         });
     }
-
     /**
      * Reverse the migrations.
      *
